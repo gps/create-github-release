@@ -1,0 +1,16 @@
+name: 'Creates a GitHub Release'
+description: 'Creates a GitHub Release for a tag'
+author: 'Gopal Sharma <gps@surya-soft.com>'
+inputs:
+  GH_TOKEN:
+    description: GitHub Token used to interact with GitHub API
+    required: True
+  TAG_NAME:
+    description: Tag name to associate artifacts with
+    required: True
+  ARTIFACTS:
+    description: Artifacts to associate with release, newline separated
+    required: True
+runs:
+  using: node12
+  main: index.js
