@@ -35,9 +35,9 @@ async function getUploadUrl(octokit, owner, repo, tag) {
 }
 
 async function uploadAsset(octokit, uploadUrl, artifactPath) {
-    const data = fs.readFileSync(artifactPath);
-    const split = artifactPath.split("/");
-    const name = split[split.length - 1];
+    const split = artifactPath.split("==>");
+    const data = fs.readFileSync(split[0].trim());
+    const name = split[1].trim();
     try {
         const url = uploadUrl + "?name=" + name;
         await octokit.request({

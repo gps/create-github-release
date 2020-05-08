@@ -9,7 +9,7 @@ inputs:
     description: Tag name to associate artifacts with
     required: True
   ARTIFACTS:
-    description: Artifacts to associate with release, newline separated
+    description: Artifacts to associate with release
     required: True
 runs:
   using: node12
