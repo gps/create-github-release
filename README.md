@@ -6,7 +6,7 @@ Example usage:
 
 ```yml
       - name: Create release
-        uses: gps/create_github_release@master
+        uses: gps/create-github-release@master
         with:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           TAG_NAME: v${{steps.next_version.outputs.NEXT_BUILD_VERSION}}
