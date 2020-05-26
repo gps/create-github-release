@@ -1,5 +1,5 @@
 {
-  "name": "create_github_release",
+  "name": "create-github-release",
   "version": "1.0.0",
   "description": "A GitHub Action that creates a release with artifacts",
   "main": "index.js",
@@ -7,14 +7,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gps/create_github_release.git"
+    "url": "git+https://github.com/gps/create-github-release.git"
   },
   "keywords": [],
   "author": "",
   "bugs": {
-    "url": "https://github.com/gps/create_github_release/issues"
+    "url": "https://github.com/gps/create-github-release/issues"
   },
-  "homepage": "https://github.com/gps/create_github_release#readme",
+  "homepage": "https://github.com/gps/create-github-release#readme",
   "dependencies": {
     "@actions/core": "^1.2.4",
     "@actions/github": "^2.2.0"

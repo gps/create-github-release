@@ -2,16 +2,37 @@
 
 A GitHub Action that creates a release with artifacts.
 
-Example usage:
+## Inputs
+
+### `gh_token`
+
+The GitHub token used to authenticate with GitHub.
+
+**Required**
+
+### `tag_name`
+
+Tag name to associate artifacts with.
+
+**Required**
+
+### `artifacts`
+
+Artifacts to associate with release.
+
+Each artifact should be on its own line. See example for how to point to and name artifacts.
+
+**Required**
+
+## Example Usage
 
 ```yml
-      - name: Create release
-        uses: gps/create-github-release@master
-        with:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          TAG_NAME: v${{steps.next_version.outputs.NEXT_BUILD_VERSION}}
-          ARTIFACTS: |
-            dist/gen_migrations ==> gen_migrations
-            dist/gen_models ==> gen_models
-            dist/alembic ==> alembic
+- name: Create release
+  uses: gps/create-github-release@master
+  with:
+    GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    TAG_NAME: "v0.0.1"
+    ARTIFACTS: |
+      dist/foo ==> foo
+      dist/bar ==> bar
 ```
