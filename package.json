@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "description": "A GitHub Action that creates a release with artifacts",
   "main": "index.js",
-  "scripts": {
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gps/create-github-release.git"
